@@ -1,1 +1,1 @@
-#bing
+bing
