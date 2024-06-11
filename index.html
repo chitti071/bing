@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bing Search</title>
+</head>
+
+<script>
+
+function makeid(length) {
+let result = '';
+const characters = 'AB CD EF GH IJ KL MNO PQRSTU VWXYZ abcdef ghijk lmnop qrstuvw xyz 0123 45 6789';
+const charactersLength = characters.length;
+let counter = 0;
+while (counter < length) {
+result += characters.charAt(Math.floor(Math.random() * charactersLength));
+counter += 1;
+}
+return result;
+}
+var t=0;
+var key = '72321f1ba5ed484381cd27b60de2d456';
+var timer = setInterval("openlink()",10000);
+
+function openlink(){
+	var l=Math.floor(Math.random() * 100);
+var str = makeid(l);
+window.open("https://www.bing.com/search?q="+str+"&qs=n&form=QBRE&sp=-1&lq=0&pq="+str+"&sc=0-"+l+"&sk=&cvid="+key+"&ghsh=0&ghacc=0&ghpl=");
+t++;
+if(t==35) clearInterval(timer);
+}
+</script>
+<body>
+	<div>
+		Search the bing here
+		
+	</div>
+</body>
+</html>
